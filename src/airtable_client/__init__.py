@@ -21,14 +21,14 @@ class AirtableClient:
             time.sleep(self.min_request_interval - time_since_last_request)
         self.last_request_time = time.time()
 
-    def list_records(self, table_id_or_name: str, fields: list[str] | None = None, view: str | None = None):
+    def list_records(self, table: str, fields: list[str] | None = None, view: str | None = None):
         """
         Fetch all records from a table using a POST request to avoid URL length limits.
         - If fields is a list, only those fields are returned.
         - If fields is None or empty, all fields are returned.
         - If view is specified, only records in that view are returned.
         """
-        url = f"{self.base_url}/{table_id_or_name}/listRecords"
+        url = f"{self.base_url}/{table}/listRecords"
         rows = []
         offset = None
 
