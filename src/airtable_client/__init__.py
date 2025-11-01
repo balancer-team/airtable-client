@@ -60,3 +60,11 @@ class AirtableBase:
                 break
 
         return {"records": all_records}
+
+    def list_fields(self, table: str, fields: list[str] | None = None, view: str | None = None) -> list[dict]:
+        """
+        Convenience wrapper that returns only the 'fields' dicts for each record.
+        Mirrors list_records parameters.
+        """
+        result = self.list_records(table, fields=fields, view=view)
+        return [record.get("fields", {}) for record in result.get("records", [])]
