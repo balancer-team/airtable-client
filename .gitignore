@@ -15,3 +15,5 @@ wheels/
 # Scripts
 pypi.sh
 test.sh
+
+.vscode

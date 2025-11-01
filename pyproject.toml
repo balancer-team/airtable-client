@@ -1,6 +1,6 @@
 [project]
 name = "airtable-client"
-version = "0.1.4"
+version = "0.1.5"
 description = "A Python client for the Airtable API"
 authors = [{ name = "Alan Hettinger", email = "alan@balancer.team" }]
 readme = "README.md"

@@ -3,3 +3,4 @@
 pypi.sh
 test.sh
 tests/
+.vscode/
