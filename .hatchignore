@@ -1,0 +1,5 @@
+.env
+.env.*
+pypi.sh
+test.sh
+tests/

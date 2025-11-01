@@ -1,6 +1,6 @@
 [project]
 name = "airtable-client"
-version = "0.1.2"
+version = "0.1.4"
 description = "A Python client for the Airtable API"
 authors = [{ name = "Alan Hettinger", email = "alan@balancer.team" }]
 readme = "README.md"
@@ -13,7 +13,7 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/balancer-team/airtable-client"
+Homepage = "https://www.balancer.team/"
 Repository = "https://github.com/balancer-team/airtable-client"
 
 [build-system]
@@ -21,4 +21,4 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [dependency-groups]
-dev = ["dotenv>=0.9.9", "pytest>=8.3.5"]
+dev = ["dotenv>=0.9.9", "pytest>=8.3.5", "twine>=6.1.0"]
