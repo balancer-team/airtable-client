@@ -4,7 +4,7 @@ import time
 BASE_URL = "https://api.airtable.com/v0"
 
 
-class AirtableClient:
+class AirtableBase:
     def __init__(self, api_key: str, base_id: str):
         self.api_key = api_key
         self.base_id = base_id
