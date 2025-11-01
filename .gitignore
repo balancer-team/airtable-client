@@ -16,4 +16,6 @@ wheels/
 pypi.sh
 test.sh
 
+# Other
 .vscode
+.DS_Store
