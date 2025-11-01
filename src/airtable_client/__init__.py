@@ -27,9 +27,11 @@ class AirtableClient:
         - If fields is a list, only those fields are returned.
         - If fields is None or empty, all fields are returned.
         - If view is specified, only records in that view are returned.
+
+        Returns a dict with the combined records from all paginated requests.
         """
         url = f"{self.base_url}/{table}/listRecords"
-        rows = []
+        all_records = []
         offset = None
 
         # Build the base payload for the request body
@@ -50,11 +52,11 @@ class AirtableClient:
             response.raise_for_status()
             data = response.json()
 
-            # Extract the 'fields' dictionary from each record
-            for record in data.get("records", []):
-                rows.append(record.get("fields", {}))
+            # Combine records from this request
+            all_records.extend(data.get("records", []))
 
             offset = data.get("offset")
             if not offset:
                 break
-        return rows
+
+        return {"records": all_records}
