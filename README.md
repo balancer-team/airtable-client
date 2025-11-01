@@ -15,8 +15,8 @@ pip install airtable-client
 Here's a basic example of how to use the Airtable client:
 
 ```python
-from airtable_client import AirtableClient
-base = AirtableClient(api_key='your_api_key', base_id='your_base_id')
+from airtable_client import AirtableBase
+base = AirtableBase(api_key='your_api_key', base_id='your_base_id')
 records = base.list_records('table_name_or_id')
 print(records)
 ```
